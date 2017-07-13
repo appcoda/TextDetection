@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9jC-VC-uBH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Detection-->
+        <scene sceneID="xZ7-1P-gne">
+            <objects>
+                <viewController id="sUm-rZ-Uzf" customClass="ViewController" customModule="Text_Detection_Starter_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g5A-07-oaV"/>
+                        <viewControllerLayoutGuide type="bottom" id="hkc-3r-lWU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uNu-gH-O9F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3u-JN-vRh">
+                                <rect key="frame" x="0.0" y="64" width="375" height="527"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ji5-LB-R3A">
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Words ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.91805601120000002" green="0.29896932840000001" blue="0.2010047734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="29" name="SFMono-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Letters">
+                                        <attributes>
+                                            <color key="NSColor" red="0.033137437729999997" green="0.34795832570000002" blue="0.85755076139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="29" name="SFMono-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ji5-LB-R3A" firstAttribute="top" secondItem="G3u-JN-vRh" secondAttribute="bottom" constant="8" id="2EO-hQ-dtT"/>
+                            <constraint firstAttribute="trailing" secondItem="ji5-LB-R3A" secondAttribute="trailing" id="5la-gB-xZh"/>
+                            <constraint firstItem="hkc-3r-lWU" firstAttribute="top" secondItem="ji5-LB-R3A" secondAttribute="bottom" id="Bww-5b-4f7"/>
+                            <constraint firstAttribute="trailing" secondItem="G3u-JN-vRh" secondAttribute="trailing" id="Ima-3x-F3l"/>
+                            <constraint firstItem="ji5-LB-R3A" firstAttribute="top" secondItem="G3u-JN-vRh" secondAttribute="bottom" constant="8" id="NgV-Mx-4I7"/>
+                            <constraint firstItem="ji5-LB-R3A" firstAttribute="leading" secondItem="uNu-gH-O9F" secondAttribute="leading" id="Y1v-rY-xjt"/>
+                            <constraint firstItem="G3u-JN-vRh" firstAttribute="leading" secondItem="uNu-gH-O9F" secondAttribute="leading" id="aKe-sc-ngT"/>
+                            <constraint firstItem="G3u-JN-vRh" firstAttribute="top" secondItem="g5A-07-oaV" secondAttribute="bottom" id="mSb-Cd-GqK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text Detection" largeTitleDisplayMode="always" id="PXc-39-tmk"/>
+                    <connections>
+                        <outlet property="imageView" destination="G3u-JN-vRh" id="2LP-bR-Uht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwP-w7-o8p" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yJb-ga-FWE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9jC-VC-uBH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v09-hc-Jv2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sUm-rZ-Uzf" kind="relationship" relationship="rootViewController" id="ABM-gF-EVw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9T9-MV-oUX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.19999999999999" y="138.53073463268368"/>
+        </scene>
+    </scenes>
+</document>
